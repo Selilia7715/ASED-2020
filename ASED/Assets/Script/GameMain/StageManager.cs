@@ -58,7 +58,7 @@ public class StageManager : MonoBehaviour {
     {
         // 初期座標の決定
         Vector2 objPos;
-        objPos.x = -(((csvDatas[0].Length * objSize.x) / 2.0f) / 2.0f);
+        objPos.x = -((csvDatas[0].Length * objSize.x) / 2.0f);
         objPos.y = ((csvDatas.Count * objSize.y) / 2.0f) / 2.0f;
 
         // 縦
