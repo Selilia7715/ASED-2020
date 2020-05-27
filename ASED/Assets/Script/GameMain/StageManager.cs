@@ -28,10 +28,17 @@ public class StageManager : MonoBehaviour {
     // Use this for initialization
     void Start()
     {
+        // ファイルパスの作成
+        string failPath = "Stage/";
+        failPath = failPath + stageNanme;
+
         // CSV読み込み
-        LoadCsv(stageNanme);
+        LoadCsv(failPath);
         // ステージ作成
         CreateStage();
+
+        // テスト
+        SoundManager.Instance.PlayBGM((int)BGM_NAME.TITLE);
     }
 
     // Update is called once per frame
