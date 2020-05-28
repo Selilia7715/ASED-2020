@@ -61,7 +61,14 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scenes\CLEARscene\ClearGameManager.cs" />
+    <Compile Include="Assets\Scenes\GAMEscene\GAMEGameManager.cs" />
+    <Compile Include="Assets\Scenes\GAMEscene\Kyara.cs" />
+    <Compile Include="Assets\Scenes\SELECTscene\SelectGameManager.cs" />
+    <Compile Include="Assets\Scenes\TITLEscene\TitleGameManager.cs" />
+    <Compile Include="Assets\Script\GameMain\SoundManager.cs" />
     <Compile Include="Assets\Script\GameMain\StageManager.cs" />
+    <Compile Include="Assets\Script\GameMain\UIManager.cs" />
     <Compile Include="Assets\Terasurware\Classes\Entity_Sheet1.cs" />
     <Reference Include="UnityEditor.StandardEvents">
       <HintPath>C:/Users/Owner/Desktop/project/cesa/ASED/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
