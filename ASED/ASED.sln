@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ASED", "Assembly-CSharp.csproj", "{72F00234-986F-91BD-35EC-BEA2159DF3BB}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp", "Assembly-CSharp.csproj", "{72F00234-986F-91BD-35EC-BEA2159DF3BB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ASED", "Assembly-CSharp-Editor.csproj", "{D851329C-B468-C211-FF78-1953C640D777}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp-Editor", "Assembly-CSharp-Editor.csproj", "{D851329C-B468-C211-FF78-1953C640D777}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
