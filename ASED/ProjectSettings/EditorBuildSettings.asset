@@ -6,6 +6,57 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
+    path: Assets/Scenes/TITLEscene/TITLE.unity
+    guid: 3a6082b021402b447977bbd516dc0723
+  - enabled: 1
+    path: Assets/Scenes/SELECTscene/SELECT.unity
+    guid: 3b3b3485044055844b8cb0adbfa274ce
+  - enabled: 1
+    path: "Assets/Scenes/GAMEscene/Stage1\uFF5E15/Stage1.unity"
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: "Assets/Scenes/GAMEscene/Stage1\uFF5E15/Stage2.unity"
+    guid: 79c8375210ee6444b9857d47bee05002
+  - enabled: 1
+    path: "Assets/Scenes/GAMEscene/Stage1\uFF5E15/Stage3.unity"
+    guid: 347341117566ae64bb0823bcc8984853
+  - enabled: 1
+    path: "Assets/Scenes/GAMEscene/Stage1\uFF5E15/Stage4.unity"
+    guid: f0e95da0534fe10438beb285d90afde5
+  - enabled: 1
+    path: "Assets/Scenes/GAMEscene/Stage1\uFF5E15/Stage5.unity"
+    guid: c6572aab054831f4cb5ff6e4724d50d8
+  - enabled: 1
+    path: "Assets/Scenes/GAMEscene/Stage1\uFF5E15/Stage6.unity"
+    guid: 40141d19b48c4834e89c043951889f51
+  - enabled: 1
+    path: "Assets/Scenes/GAMEscene/Stage1\uFF5E15/Stage7.unity"
+    guid: 0d50962ff9a10b640af010f265d31999
+  - enabled: 1
+    path: "Assets/Scenes/GAMEscene/Stage1\uFF5E15/Stage8.unity"
+    guid: fc9964c6d5fefcf46a8fb457265d0371
+  - enabled: 1
+    path: "Assets/Scenes/GAMEscene/Stage1\uFF5E15/Stage9.unity"
+    guid: 5a600f1a5782e91408e2e8e9817c1d5c
+  - enabled: 1
+    path: "Assets/Scenes/GAMEscene/Stage1\uFF5E15/Stage10.unity"
+    guid: 51c34a2107d218444bf9b7ea3cb87cf6
+  - enabled: 1
+    path: "Assets/Scenes/GAMEscene/Stage1\uFF5E15/Stage11.unity"
+    guid: a0be86bf490807640a9745ada2a8fab5
+  - enabled: 1
+    path: "Assets/Scenes/GAMEscene/Stage1\uFF5E15/Stage12.unity"
+    guid: a5af057f6f6e78f4b9f34f7d09daca81
+  - enabled: 1
+    path: "Assets/Scenes/GAMEscene/Stage1\uFF5E15/Stage13.unity"
+    guid: fb0ab907a072616419e4b08d8e58328f
+  - enabled: 1
+    path: "Assets/Scenes/GAMEscene/Stage1\uFF5E15/Stage14.unity"
+    guid: 09227946d1eebeb4a930b952ed0952f5
+  - enabled: 1
+    path: "Assets/Scenes/GAMEscene/Stage1\uFF5E15/Stage15.unity"
+    guid: efed65d986502194db5398f555542c35
+  - enabled: 1
+    path: Assets/Scenes/CLEARscene/CLEAR.unity
+    guid: 385aa09901bc87243b04926158c601a4
   m_configObjects: {}
