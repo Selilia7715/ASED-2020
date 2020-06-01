@@ -20,8 +20,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4857627531411470}
   - component: {fileID: 212565169692550232}
-  - component: {fileID: 61091002953434464}
-  - component: {fileID: 50095778045508568}
+  - component: {fileID: 61425984157929624}
+  - component: {fileID: 50193602590059756}
   m_Layer: 0
   m_Name: "\u77F3\u7573"
   m_TagString: Ground
@@ -42,7 +42,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!50 &50095778045508568
+--- !u!50 &50193602590059756
 Rigidbody2D:
   serializedVersion: 4
   m_ObjectHideFlags: 1
@@ -60,9 +60,9 @@ Rigidbody2D:
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 1
+  m_CollisionDetection: 0
   m_Constraints: 0
---- !u!61 &61091002953434464
+--- !u!61 &61425984157929624
 BoxCollider2D:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -78,14 +78,14 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 11.81, y: 11.81}
+    oldSize: {x: 2.4, y: 2.4}
     newSize: {x: 11.81, y: 11.81}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 11.81, y: 11.81}
+  m_Size: {x: 2.4, y: 2.4}
   m_EdgeRadius: 0
 --- !u!212 &212565169692550232
 SpriteRenderer:
