@@ -65,30 +65,37 @@ public class StageManager : MonoBehaviour {
     {
         // 初期座標の決定
         Vector2 objPos;
-        objPos.x = -((csvDatas[0].Length * objSize.x) / 2.0f);
-        objPos.y = ((csvDatas.Count * objSize.y) / 2.0f) / 2.0f;
+        objPos.x = -((csvDatas[0].Length * objSize.x));
+        objPos.y = ((csvDatas.Count * objSize.y) / 2.0f);
+        // SpriteとPositionの補正値
+        Vector2 offsetPos;
+        offsetPos.x = stageData[(int)1].obj.GetComponent<SpriteRenderer>().bounds.size.x - (objSize.x * 2.0f);
+        offsetPos.y = stageData[(int)1].obj.GetComponent<SpriteRenderer>().bounds.size.y - (objSize.y * 2.0f);
 
-        // 縦
+        // Y座標
         for (int y = 0; y < csvDatas.Count; y++)
         { 
-            // 横
+            // X座標
             for(int x = 0;x < csvDatas[y].Length;x++)
             {
-                // 0の時は何も生成しない
+                // 0の時は何も生成しない(生成オブジェクトなし)
                 if( 0 != int.Parse(csvDatas[y][x]))
                 {
                     // ステージオブジェクトの生成
                     GameObject obj = Instantiate(stageData[int.Parse(csvDatas[y][x])].obj);
                     // オブジェクト座標を決定する
                     obj.transform.position = new Vector3(objPos.x, objPos.y, 0.0f);
+                    // オブジェクトの大きさを決定する
+                    obj.transform.localScale = new Vector3(objSize.x, objSize.y, 0.0f);
                 }
-                // 横の座標を加算する
-                objPos.x += objSize.x;
+                // X座標を加算する
+                objPos.x += ((objSize.x * 2.0f) + offsetPos.x);
             }
-            // 横の座標を初期座標にする
-            objPos.x = -((csvDatas[0].Length * objSize.x) / 2.0f);
-            // 縦の座標を減算する
-            objPos.y -= objSize.y;
+            // X座標を初期座標にする
+            objPos.x = -((csvDatas[0].Length * objSize.x));
+
+            // Y座標を減算する
+            objPos.y -= ((objSize.y * 2.0f) + offsetPos.y);
         }
     }
 
