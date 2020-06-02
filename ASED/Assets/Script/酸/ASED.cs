@@ -4,8 +4,20 @@ using UnityEngine;
 
 public class ASED : MonoBehaviour {
 
-    float speed;
+    // 酸の動く向き
+    public enum MOVE_DISTANCE
+    {
+        NONE = 0,
+        TOP,
+        DOWN,
+        RIGHT,
+        LEFT,
+    }
 
+    // 速度
+    public float speed;
+    // 動く方向
+    public MOVE_DISTANCE dis;
 
     void Update()
     {
