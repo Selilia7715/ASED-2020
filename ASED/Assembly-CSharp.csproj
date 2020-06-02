@@ -88,6 +88,7 @@
     <Compile Include="Assets\Script\ギミック\Flower.cs" />
     <Compile Include="Assets\Script\ギミック\respone.cs" />
     <Compile Include="Assets\Script\キャラクター\Kyara.cs" />
+    <Compile Include="Assets\Script\酸\ASED.cs" />
     <Compile Include="Assets\Terasurware\Classes\Entity_Sheet1.cs" />
     <Reference Include="UnityEditor.StandardEvents">
       <HintPath>E:/school/cesa/ASED/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
