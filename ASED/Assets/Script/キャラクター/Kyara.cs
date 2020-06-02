@@ -79,7 +79,7 @@ public class Kyara : MonoBehaviour
 
     // 速度
 
-    public Vector2 SPEED = new Vector2(2.0f, 0.05f);
+    public Vector2 SPEED = new Vector2(0.2f, 0.2f);
     public float flap = 5000.0f;
     bool jump = false;
     Rigidbody2D rb2d;
@@ -145,6 +145,24 @@ public class Kyara : MonoBehaviour
             // 代入したPositionに対して加算減算を行う
 
             Position.x += SPEED.x;
+
+        }
+        // 上キーを押し続けていたら
+
+        if (Input.GetKey("up"))
+        {
+
+            // 代入したPositionに対して加算減算を行う
+
+            Position.y += SPEED.y;
+
+        }
+        else if (Input.GetKey("down"))
+        { // 下キーを押し続けていたら
+
+            // 代入したPositionに対して加算減算を行う
+
+            Position.y -= SPEED.y;
 
         }
 

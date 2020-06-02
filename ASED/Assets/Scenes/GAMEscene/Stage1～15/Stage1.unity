@@ -249,6 +249,30 @@ Prefab:
       propertyPath: test
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 114435405843375112, guid: ad76dc7d32a97f34b99e78018a8b3ec6,
+        type: 2}
+      propertyPath: stageData.Array.data[11].obj
+      value: 
+      objectReference: {fileID: 1855747984967736, guid: 76dd840e752785545adb99e627c788f6,
+        type: 2}
+    - target: {fileID: 114435405843375112, guid: ad76dc7d32a97f34b99e78018a8b3ec6,
+        type: 2}
+      propertyPath: stageData.Array.data[5].obj
+      value: 
+      objectReference: {fileID: 1467413314178796, guid: 387c50a3f70a9cd47969351e116ab3bc,
+        type: 2}
+    - target: {fileID: 114435405843375112, guid: ad76dc7d32a97f34b99e78018a8b3ec6,
+        type: 2}
+      propertyPath: stageData.Array.data[18].obj
+      value: 
+      objectReference: {fileID: 1665200377515730, guid: f5d7cb75100c1e749a1971d83ce5ab16,
+        type: 2}
+    - target: {fileID: 114435405843375112, guid: ad76dc7d32a97f34b99e78018a8b3ec6,
+        type: 2}
+      propertyPath: stageData.Array.data[13].obj
+      value: 
+      objectReference: {fileID: 1425666150255698, guid: 118df165de6eb8a44ab9a265f200856b,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ad76dc7d32a97f34b99e78018a8b3ec6, type: 2}
   m_IsPrefabAsset: 0
