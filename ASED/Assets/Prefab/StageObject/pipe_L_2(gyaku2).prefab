@@ -23,6 +23,7 @@ GameObject:
   - component: {fileID: 61185472017160856}
   - component: {fileID: 50408395208908600}
   - component: {fileID: 61377852128252596}
+  - component: {fileID: 61975677791072848}
   m_Layer: 0
   m_Name: pipe_L_2(gyaku2)
   m_TagString: Pipe
@@ -75,7 +76,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 1.1366632}
+  m_Offset: {x: 0, y: 1.1459601}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -86,7 +87,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.4, y: 0.1266737}
+  m_Size: {x: 2.4, y: 0.03369999}
   m_EdgeRadius: 0
 --- !u!61 &61377852128252596
 BoxCollider2D:
@@ -100,7 +101,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 1.1585685, y: -0.07506275}
+  m_Offset: {x: 1.149265, y: -0.07506275}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -111,7 +112,32 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.08286309, y: 2.2498746}
+  m_Size: {x: 0.027040958, y: 2.2498746}
+  m_EdgeRadius: 0
+--- !u!61 &61975677791072848
+BoxCollider2D:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1093377924454540}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -1.1299094, y: -1.129214}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 2.4, y: 2.4}
+    newSize: {x: 2.4, y: 2.4}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.1401813, y: 0.141572}
   m_EdgeRadius: 0
 --- !u!212 &212116975581061602
 SpriteRenderer:
