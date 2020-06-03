@@ -25,7 +25,7 @@ GameObject:
   - component: {fileID: 50231929972689764}
   m_Layer: 0
   m_Name: "\u30AD\u30E3\u30E9\u30AF\u30BF\u30FC"
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -62,7 +62,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!58 &58258737441752952
 CircleCollider2D:
   m_ObjectHideFlags: 1
@@ -90,7 +90,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SPEED: {x: 0.2, y: 0}
-  flap: 500
+  flap: 600
 --- !u!212 &212086872238366556
 SpriteRenderer:
   m_ObjectHideFlags: 1

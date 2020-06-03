@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 212325029746764430}
   - component: {fileID: 50474499341187118}
   - component: {fileID: 70752165173382642}
+  - component: {fileID: 114472160121163016}
   m_Layer: 0
   m_Name: "\u82B1(\u30B4\u30FC\u30EB\u306E\u5F79\u5272)"
   m_TagString: Untagged
@@ -49,7 +50,7 @@ Rigidbody2D:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1808738594203578}
-  m_BodyType: 0
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -77,6 +78,17 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Size: {x: 2.4, y: 2.4}
   m_Direction: 0
+--- !u!114 &114472160121163016
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1808738594203578}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0f25e07f49ccf84e813236c05a15b58, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!212 &212325029746764430
 SpriteRenderer:
   m_ObjectHideFlags: 1
