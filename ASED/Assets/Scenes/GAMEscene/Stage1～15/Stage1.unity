@@ -165,7 +165,7 @@ Prefab:
     - target: {fileID: 114435405843375112, guid: ad76dc7d32a97f34b99e78018a8b3ec6,
         type: 2}
       propertyPath: stageData.Array.size
-      value: 32
+      value: 33
       objectReference: {fileID: 0}
     - target: {fileID: 4076595850269932, guid: ad76dc7d32a97f34b99e78018a8b3ec6, type: 2}
       propertyPath: m_LocalPosition.x
@@ -232,7 +232,7 @@ Prefab:
     - target: {fileID: 114435405843375112, guid: ad76dc7d32a97f34b99e78018a8b3ec6,
         type: 2}
       propertyPath: stageNanme
-      value: Stage1
+      value: Test
       objectReference: {fileID: 0}
     - target: {fileID: 114435405843375112, guid: ad76dc7d32a97f34b99e78018a8b3ec6,
         type: 2}
@@ -272,6 +272,18 @@ Prefab:
       propertyPath: stageData.Array.data[13].obj
       value: 
       objectReference: {fileID: 1425666150255698, guid: 118df165de6eb8a44ab9a265f200856b,
+        type: 2}
+    - target: {fileID: 114435405843375112, guid: ad76dc7d32a97f34b99e78018a8b3ec6,
+        type: 2}
+      propertyPath: stageData.Array.data[7].obj
+      value: 
+      objectReference: {fileID: 1114356988573690, guid: 3e7b68e0ff9488b40a9458b7a44babae,
+        type: 2}
+    - target: {fileID: 114435405843375112, guid: ad76dc7d32a97f34b99e78018a8b3ec6,
+        type: 2}
+      propertyPath: stageData.Array.data[32].obj
+      value: 
+      objectReference: {fileID: 1808738594203578, guid: af3e9314eefdd2b4cbc32bf50a524e26,
         type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ad76dc7d32a97f34b99e78018a8b3ec6, type: 2}
