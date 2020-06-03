@@ -20,6 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4838816758525828}
   - component: {fileID: 212708781975695382}
+  - component: {fileID: 114033089265430724}
   m_Layer: 0
   m_Name: CreateAcidLeft
   m_TagString: Untagged
@@ -40,6 +41,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114033089265430724
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1114356988573690}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 41856bc93a1da974fa43fd42229d2bf8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  acid: {fileID: 1462495601441990, guid: 65a1c8b857d3a324a8696ed61ac49f2f, type: 2}
+  dis: 4
 --- !u!212 &212708781975695382
 SpriteRenderer:
   m_ObjectHideFlags: 1

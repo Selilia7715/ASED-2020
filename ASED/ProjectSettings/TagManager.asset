@@ -8,6 +8,7 @@ TagManager:
   - SceneManager
   - Ground
   - Pipe
+  - Toge
   layers:
   - Default
   - TransparentFX
