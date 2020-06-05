@@ -46,7 +46,7 @@ public class Kyara : MonoBehaviour
 
         if (collision.gameObject.tag == "Flower")
         {
-            UnityEngine.SceneManagement.SceneManager.LoadScene(1);
+            UnityEngine.SceneManagement.SceneManager.LoadScene(17);
         }
 
     }

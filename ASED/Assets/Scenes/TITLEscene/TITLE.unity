@@ -510,6 +510,7 @@ MonoBehaviour:
   - Stage14
   - Stage15
   - CLEAR
+  - GAMEOVER
 --- !u!212 &1680052498
 SpriteRenderer:
   m_ObjectHideFlags: 0

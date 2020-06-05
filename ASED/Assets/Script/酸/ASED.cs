@@ -73,11 +73,11 @@ public class ASED : MonoBehaviour {
             Destroy(collision.gameObject,1.5f);
         }
 
-        //// Flowerに当たったら
-        //if (collision.gameObject.tag == "Flower")
-        //{
-        //}
-
+        // Flowerに当たったら
+        if (collision.gameObject.tag == "Flower")
+        {
+            UnityEngine.SceneManagement.SceneManager.LoadScene(18);
+        }
 
     }
 

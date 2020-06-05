@@ -257,7 +257,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "TITLE\u3078\u623B\u308B"
+  m_Text: To SelectStage
 --- !u!222 &191646635
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -537,7 +537,7 @@ GameObject:
   - component: {fileID: 2113556176}
   - component: {fileID: 2113556175}
   m_Layer: 5
-  m_Name: ToTITLE
+  m_Name: ToSELECT
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -601,7 +601,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 114968518502648798, guid: 5d03e39fd838f30419b338acccc2dc25,
+      - m_Target: {fileID: 114904549115160992, guid: b84e9a1b6e3a30b4083427e272bce862,
           type: 2}
         m_MethodName: ButtonClicked
         m_Mode: 1
