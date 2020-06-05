@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class ASED : MonoBehaviour {
 
@@ -33,12 +34,51 @@ public class ASED : MonoBehaviour {
     //当たり判定
     void OnCollisionEnter2D(Collision2D collision)
     {
-        //敵に当たったら
+        //パイプに当たったら
         if (collision.gameObject.tag == "Pipe")
         {
             // 1.5秒後に破壊
             Destroy(collision.gameObject,1.5f);
         }
+
+        //Pipe_L_2に当たったら
+        if (collision.gameObject.tag == "Pipe_L_2")
+        {
+            dis = MOVE_DISTANCE.RIGHT;
+            // 1.5秒後に破壊
+            Destroy(collision.gameObject,1.5f);
+        }
+
+        //Pipe_L_2(gyaku1)に当たったら
+        if (collision.gameObject.tag == "Pipe_L_2(gyaku1)")
+        {
+            dis = MOVE_DISTANCE.RIGHT;
+            // 1.5秒後に破壊
+            Destroy(collision.gameObject,1.5f);
+        }
+
+        //Pipe_L_2(gyaku2)に当たったら
+        if (collision.gameObject.tag == "Pipe_L_2(gyaku2)")
+        {
+            dis = MOVE_DISTANCE.DOWN;
+            // 1.5秒後に破壊
+            Destroy(collision.gameObject,1.5f);
+        }
+
+        //Pipe_L_2(gyaku3)に当たったら
+        if (collision.gameObject.tag == "Pipe_L_2(gyaku3)")
+        {
+            dis = MOVE_DISTANCE.TOP;
+            // 1.5秒後に破壊
+            Destroy(collision.gameObject,1.5f);
+        }
+
+        //// Flowerに当たったら
+        //if (collision.gameObject.tag == "Flower")
+        //{
+        //}
+
+
     }
 
     void Move()

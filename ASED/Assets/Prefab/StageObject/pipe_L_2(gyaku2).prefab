@@ -26,7 +26,7 @@ GameObject:
   - component: {fileID: 61975677791072848}
   m_Layer: 0
   m_Name: pipe_L_2(gyaku2)
-  m_TagString: Pipe
+  m_TagString: Pipe_L_2(gyaku2)
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

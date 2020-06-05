@@ -9,6 +9,14 @@ TagManager:
   - Ground
   - Pipe
   - Toge
+  - Acid
+  - Pipe_L_2
+  - Pipe_L_2(gyaku1)
+  - Pipe_L_2(gyaku2)
+  - Pipe_L_2(gyaku3)
+  - Pipe_T_1
+  - Pipe_T_2
+  - Flower
   layers:
   - Default
   - TransparentFX
