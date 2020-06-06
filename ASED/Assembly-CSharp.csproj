@@ -87,6 +87,7 @@
     <Compile Include="Assets\Script\SceneManager\SceneManager.cs" />
     <Compile Include="Assets\Script\ギミック\CreateAcid.cs" />
     <Compile Include="Assets\Script\ギミック\Flower.cs" />
+    <Compile Include="Assets\Script\ギミック\Pipe.cs" />
     <Compile Include="Assets\Script\ギミック\respone.cs" />
     <Compile Include="Assets\Script\キャラクター\Kyara.cs" />
     <Compile Include="Assets\Script\酸\ASED.cs" />

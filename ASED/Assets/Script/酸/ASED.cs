@@ -34,7 +34,7 @@ public class ASED : MonoBehaviour {
     //当たり判定
     void OnCollisionEnter2D(Collision2D collision)
     {
-        //パイプに当たったら
+        //pipeに当たったら
         if (collision.gameObject.tag == "Pipe")
         {
             // 1.5秒後に破壊
@@ -76,6 +76,7 @@ public class ASED : MonoBehaviour {
         // Flowerに当たったら
         if (collision.gameObject.tag == "Flower")
         {
+            // GAMEOVERに移動
             UnityEngine.SceneManagement.SceneManager.LoadScene(18);
         }
 

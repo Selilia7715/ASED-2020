@@ -23,7 +23,9 @@ public enum Scene_Name
     Stage13,
     Stage14,
     Stage15,
-    CLERA
+    CLERA,
+    GAMEOVER,
+
 };
 
 /* static とは静的メンバー(変数や、メソッド等を、インスタンス単位で生成するのではなく、
