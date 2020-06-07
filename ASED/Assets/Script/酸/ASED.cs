@@ -20,61 +20,74 @@ public class ASED : MonoBehaviour {
     // 速度
     public float speed;
 
+    // 進行方向
     public MOVE_DISTANCE dis;
+
+    // 一つ前の進行方向
+    private MOVE_DISTANCE beforeDis;
+
+    // 一つ前の座標
+    private Vector3 beforePos;
+
+    // 下降中
+    private bool descendingFlg = false;
+
+    private int descendingCnt = 0;
 
     void Start()
     {
+        // リジボの取得
         rb = GetComponent<Rigidbody2D>();
+        // 進行方向の取得
+        beforeDis = dis;
+        // 座標の取得
+        beforePos = transform.position;
     }
     void Update()
     {
+        // 動作処理
         Move();
+    }
+
+    //当たり判定
+    void OnCollisionStay2D(Collision2D collision)
+    {
+        // 進行方向の再算出
+        if( MOVE_DISTANCE.NONE == dis && 
+            "Pipe" == collision.gameObject.tag )
+        {
+            Pipe.Pipe_Status status = collision.gameObject.GetComponent<Pipe>().status;
+            if ( MOVE_DISTANCE.RIGHT == beforeDis && 
+                true == status.right)
+            {
+                dis = MOVE_DISTANCE.RIGHT;
+                beforeDis = dis;
+            }
+            else if( MOVE_DISTANCE.LEFT == beforeDis &&
+                true == status.left)
+            {
+                dis = MOVE_DISTANCE.LEFT;
+                beforeDis = dis;
+            }
+        }
     }
 
     //当たり判定
     void OnCollisionEnter2D(Collision2D collision)
     {
         //pipeに当たったら
-        if (collision.gameObject.tag == "Pipe")
+        if ( "Pipe" == collision.gameObject.tag )
         {
-            // 1.5秒後に破壊
-            Destroy(collision.gameObject,1.5f);
-        }
-
-        //Pipe_L_2に当たったら
-        if (collision.gameObject.tag == "Pipe_L_2")
-        {
-            dis = MOVE_DISTANCE.RIGHT;
-            // 1.5秒後に破壊
-            Destroy(collision.gameObject,1.5f);
-        }
-
-        //Pipe_L_2(gyaku1)に当たったら
-        if (collision.gameObject.tag == "Pipe_L_2(gyaku1)")
-        {
-            dis = MOVE_DISTANCE.RIGHT;
-            // 1.5秒後に破壊
-            Destroy(collision.gameObject,1.5f);
-        }
-
-        //Pipe_L_2(gyaku2)に当たったら
-        if (collision.gameObject.tag == "Pipe_L_2(gyaku2)")
-        {
-            dis = MOVE_DISTANCE.DOWN;
-            // 1.5秒後に破壊
-            Destroy(collision.gameObject,1.5f);
-        }
-
-        //Pipe_L_2(gyaku3)に当たったら
-        if (collision.gameObject.tag == "Pipe_L_2(gyaku3)")
-        {
-            dis = MOVE_DISTANCE.TOP;
-            // 1.5秒後に破壊
-            Destroy(collision.gameObject,1.5f);
+            // 進行方向の決定
+            if (DistanceDecision(collision.gameObject) )
+            {
+                // 1.5秒後に破壊
+                Destroy(collision.gameObject, 1.5f);
+            } 
         }
 
         // Flowerに当たったら
-        if (collision.gameObject.tag == "Flower")
+        if ( "Flower" == collision.gameObject.tag )
         {
             // GAMEOVERに移動
             UnityEngine.SceneManagement.SceneManager.LoadScene(18);
@@ -82,8 +95,78 @@ public class ASED : MonoBehaviour {
 
     }
 
+    // 進行方向の決定
+    bool  DistanceDecision(GameObject obj)
+    {
+        Pipe.Pipe_Status status = obj.GetComponent<Pipe>().status;
+
+        // 進行方向通りに進めればtrue、そうでなければfalse
+        bool moveOnFlg = true;
+
+        // 進行方向通りに進めない場合
+        switch (dis)
+        {
+            case MOVE_DISTANCE.TOP:
+                if ( true != status.down )
+                {
+                    beforeDis = dis;
+                    dis = MOVE_DISTANCE.DOWN;
+                    moveOnFlg = false;
+                }
+                break;
+   
+            case MOVE_DISTANCE.DOWN:
+                if ( true != status.top )
+                {
+                    beforeDis = dis;
+                    dis = MOVE_DISTANCE.TOP;
+                    moveOnFlg = false;
+                }
+                break;
+
+            case MOVE_DISTANCE.RIGHT:
+                if ( true != status.right )
+                {
+                    beforeDis = dis;
+                    dis = MOVE_DISTANCE.LEFT;
+                    moveOnFlg = false;
+                }
+                break;
+
+            case MOVE_DISTANCE.LEFT:
+                if ( true != status.left )
+                {
+                    beforeDis = dis;
+                    dis = MOVE_DISTANCE.RIGHT;
+                    moveOnFlg = false;
+                }
+                break;
+
+            default:
+                break;
+        }
+
+        return moveOnFlg;
+             
+    }
+
+    // 動作処理
     void Move()
      {
+        // 下方向
+        if (beforePos.y > transform.position.y)
+        {
+            dis = MOVE_DISTANCE.DOWN;
+            descendingFlg = true;
+        }
+        else if (MOVE_DISTANCE.DOWN == dis && 
+            true == descendingFlg &&
+            beforePos.y == transform.position.y)
+        {
+            dis = MOVE_DISTANCE.NONE;
+            descendingFlg = false;
+        }
+
         // どの方向に移動するか
         switch (dis)
         {
@@ -92,7 +175,7 @@ public class ASED : MonoBehaviour {
                 break;
 
             case MOVE_DISTANCE.DOWN:
-                rb.velocity = new Vector2(rb.velocity.x, -speed);
+                //rb.velocity = new Vector2(rb.velocity.x, -speed);
                 break;
 
             case MOVE_DISTANCE.RIGHT:
@@ -106,6 +189,13 @@ public class ASED : MonoBehaviour {
             default:
                 break;
         }
+        
+        if( 0 == descendingCnt % 30)
+        {
+            beforePos.y = transform.position.y;
+        }
+
+        descendingCnt++;
 
     }
 }

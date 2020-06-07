@@ -4,6 +4,18 @@ using UnityEngine;
 
 public class Pipe : MonoBehaviour {
 
+    [System.Serializable]
+    public struct Pipe_Status
+    {
+        public bool top;
+        public bool down;
+        public bool right;
+        public bool left;
+    };
+
+
+    public Pipe_Status status;
+
 	// Use this for initialization
 	void Start () {
 		
