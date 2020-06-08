@@ -32,6 +32,12 @@ public class ASED : MonoBehaviour {
     // 下降中
     private bool descendingFlg = false;
 
+    // パイプの真ん中まで進んだ時にtrueになる
+    private bool centerMoveFlg = false;
+
+    // 進行方向のパイプの中心座標
+    Vector3 pipeCenterPos;
+
     private int descendingCnt = 0;
 
     void Start()
@@ -52,43 +58,61 @@ public class ASED : MonoBehaviour {
     //当たり判定
     void OnCollisionStay2D(Collision2D collision)
     {
-        // 進行方向の再算出
-        if( MOVE_DISTANCE.NONE == dis && 
-            "Pipe" == collision.gameObject.tag )
+
+        // パイプの中心まできたか判断
+        if( pipeCenterPos.x == transform.position.x && 
+            pipeCenterPos.y == transform.position.y && 
+            false == centerMoveFlg )
         {
-            Pipe.Pipe_Status status = collision.gameObject.GetComponent<Pipe>().status;
-            if ( MOVE_DISTANCE.RIGHT == beforeDis && 
-                true == status.right)
+            centerMoveFlg = true;
+        }
+        else
+        {
+            transform.position = Vector3.MoveTowards(transform.position, pipeCenterPos, speed * Time.deltaTime);
+        }
+
+        if (centerMoveFlg)
+        { 
+        // 進行方向の再算出
+            if (MOVE_DISTANCE.NONE == dis &&
+                "Pipe" == collision.gameObject.tag)
             {
-                dis = MOVE_DISTANCE.RIGHT;
-                beforeDis = dis;
-            }
-            else if( MOVE_DISTANCE.LEFT == beforeDis &&
-                true == status.left)
-            {
-                dis = MOVE_DISTANCE.LEFT;
-                beforeDis = dis;
-            }
-            else if ( MOVE_DISTANCE.TOP == beforeDis || 
-                MOVE_DISTANCE.DOWN == beforeDis )
-            {
-                if (true == status.right &&
-                    false == status.left)
+                Pipe.Pipe_Status status = collision.gameObject.GetComponent<Pipe>().status;
+                if (MOVE_DISTANCE.RIGHT == beforeDis &&
+                    true == status.right)
                 {
                     dis = MOVE_DISTANCE.RIGHT;
+                    beforeDis = dis;
                 }
-                else if (false == status.right &&
+                else if (MOVE_DISTANCE.LEFT == beforeDis &&
                     true == status.left)
                 {
                     dis = MOVE_DISTANCE.LEFT;
+                    beforeDis = dis;
                 }
-                else if( true == status.right &&
-                    true == status.left)
+                else if (MOVE_DISTANCE.TOP == beforeDis ||
+                    MOVE_DISTANCE.DOWN == beforeDis)
                 {
-                    // 2つに分かれる処理
+                    if (true == status.right &&
+                        false == status.left)
+                    {
+                        dis = MOVE_DISTANCE.RIGHT;
+                    }
+                    else if (false == status.right &&
+                        true == status.left)
+                    {
+                        dis = MOVE_DISTANCE.LEFT;
+                    }
+                    else if (true == status.right &&
+                        true == status.left)
+                    {
+                        // 2つに分かれる処理
+                    }
                 }
             }
         }
+
+        
     }
 
     //当たり判定
@@ -118,6 +142,10 @@ public class ASED : MonoBehaviour {
     bool  DistanceDecision(GameObject obj)
     {
         Pipe.Pipe_Status status = obj.GetComponent<Pipe>().status;
+
+        pipeCenterPos = obj.transform.position;
+
+        centerMoveFlg = false;
 
         // 進行方向通りに進めればtrue、そうでなければfalse
         bool moveOnFlg = true;
@@ -173,8 +201,8 @@ public class ASED : MonoBehaviour {
     void Move()
      {
         // 下方向
-        if (beforePos.y > transform.position.y + 0.1f ||
-            beforePos.y < transform.position.y - 0.1f)
+        if (beforePos.y > transform.position.y + 0.5f ||
+            beforePos.y < transform.position.y - 0.5f)
         {
             dis = MOVE_DISTANCE.DOWN;
             descendingFlg = true;
@@ -186,6 +214,8 @@ public class ASED : MonoBehaviour {
             dis = MOVE_DISTANCE.NONE;
             descendingFlg = false;
         }
+
+        
 
         // どの方向に移動するか
         switch (dis)
