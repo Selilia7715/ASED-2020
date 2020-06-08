@@ -69,6 +69,25 @@ public class ASED : MonoBehaviour {
                 dis = MOVE_DISTANCE.LEFT;
                 beforeDis = dis;
             }
+            else if ( MOVE_DISTANCE.TOP == beforeDis || 
+                MOVE_DISTANCE.DOWN == beforeDis )
+            {
+                if (true == status.right &&
+                    false == status.left)
+                {
+                    dis = MOVE_DISTANCE.RIGHT;
+                }
+                else if (false == status.right &&
+                    true == status.left)
+                {
+                    dis = MOVE_DISTANCE.LEFT;
+                }
+                else if( true == status.right &&
+                    true == status.left)
+                {
+                    // 2つに分かれる処理
+                }
+            }
         }
     }
 
@@ -82,7 +101,7 @@ public class ASED : MonoBehaviour {
             if (DistanceDecision(collision.gameObject) )
             {
                 // 1.5秒後に破壊
-                Destroy(collision.gameObject, 1.5f);
+                //Destroy(collision.gameObject, 1.5f);
             } 
         }
 
@@ -154,7 +173,8 @@ public class ASED : MonoBehaviour {
     void Move()
      {
         // 下方向
-        if (beforePos.y > transform.position.y)
+        if (beforePos.y > transform.position.y + 0.1f ||
+            beforePos.y < transform.position.y - 0.1f)
         {
             dis = MOVE_DISTANCE.DOWN;
             descendingFlg = true;
