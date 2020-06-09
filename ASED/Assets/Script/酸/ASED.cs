@@ -73,7 +73,7 @@ public class ASED : MonoBehaviour {
 
         if (centerMoveFlg)
         { 
-        // 進行方向の再算出
+            // 進行方向の再算出
             if (MOVE_DISTANCE.NONE == dis &&
                 "Pipe" == collision.gameObject.tag)
             {
@@ -125,7 +125,7 @@ public class ASED : MonoBehaviour {
             if (DistanceDecision(collision.gameObject) )
             {
                 // 1.5秒後に破壊
-                //Destroy(collision.gameObject, 1.5f);
+                Destroy(collision.gameObject, 1.5f);
             } 
         }
 
